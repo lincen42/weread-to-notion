@@ -125,6 +125,7 @@ export async function syncAllBooksWithConfig(
           isbn: detailedBookInfo?.isbn || book.isbn || "",
           publisher: detailedBookInfo?.publisher || book.publisher || "",
           // 其他可能的详细信息也可以在这里添加
+          rating: detailedBookInfo?.newRating ? `${(detailedBookInfo.newRating / 10).toFixed(1)}% 推荐` : "",
           intro: detailedBookInfo?.intro || book.intro || "",
           publishTime: detailedBookInfo?.publishTime || book.publishTime || "",
         };
